@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App - Web Storage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app">
+        <header class="app-header">
+            <div>
+                <p class="eyebrow">Backend Development • Unit 1 • L07</p>
+                <h1>Notes App</h1>
+                <p class="subtitle">HTML + CSS + JavaScript + localStorage</p>
+            </div>
+            <button id="clearAllBtn" class="danger-outline" type="button">Clear All</button>
+        </header>
+
+        <section class="composer" aria-label="Add note">
+            <label for="noteInput">New Note</label>
+            <div class="composer-row">
+                <textarea
+                    id="noteInput"
+                    rows="3"
+                    maxlength="500"
+                    placeholder="Type your note here..."
+                ></textarea>
+                <button id="addNoteBtn" class="primary" type="button">Add Note</button>
+            </div>
+            <div class="composer-footer">
+                <span id="charCount">0 / 500</span>
+                <span id="statusMessage" aria-live="polite"></span>
+            </div>
+        </section>
+
+        <section class="notes-section">
+            <div class="section-heading">
+                <div>
+                    <h2>Saved Notes</h2>
+                    <p id="noteCount">0 notes</p>
+                </div>
+                <input
+                    id="searchInput"
+                    type="search"
+                    placeholder="Search notes..."
+                    aria-label="Search notes"
+                >
+            </div>
+
+            <div id="notesList" class="notes-list"></div>
+
+            <div id="emptyState" class="empty-state">
+                <h3>No notes yet</h3>
+                <p>Add your first note above. It will remain after a page refresh.</p>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <p>Data is stored in this browser using <strong>localStorage</strong>.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
