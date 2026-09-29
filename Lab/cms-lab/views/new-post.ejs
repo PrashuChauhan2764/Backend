@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <h1>Create New Post</h1>
+
+    <!-- Form sends post data to the backend -->
+    <form action="/posts" method="POST">
+
+        <!-- User enters the post title -->
+        <label>Title:</label>
+        <input type="text" name="title" required>
+
+        <br><br>
+
+        <!-- User enters the post content -->
+        <label>Content:</label>
+        <br>
+        <textarea name="content" rows="8" cols="50" required></textarea>
+
+        <br><br>
+
+        <!-- User enters the author name -->
+        <label>Author:</label>
+        <input type="text" name="author" required>
+
+        <br><br>
+
+        <!-- Submit form to the server -->
+        <button type="submit">Create Post</button>
+
+    </form>
+
+</body>
+</html>

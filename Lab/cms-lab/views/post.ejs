@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= post.title %></title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+    <!-- Display the complete post -->
+    <h1><%= post.title %></h1>
+
+    <p>By <%= post.author %></p>
+
+    <p>
+        <%= post.createdAt.toLocaleDateString("en-GB", {
+            day: "numeric",
+            month: "long",
+            year: "numeric"
+        }) %>
+    </p>
+
+    <hr>
+
+    <!-- Display the complete content -->
+    <p><%= post.content %></p>
+
+    <br>
+
+    <!-- Return to the post list -->
+    <a href="/">Back to Posts</a>
+
+</body>
+</html>
