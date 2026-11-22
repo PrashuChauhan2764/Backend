@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Classroom Chat</title>
+</head>
+<body>
+
+    <h1>Real-Time Classroom Chat</h1>
+
+    <input id="username" placeholder="Your name">
+    <input id="room" placeholder="Room name">
+
+    <button onclick="joinRoom()">Join Room</button>
+
+    <hr>
+
+    <div id="messages"></div>
+
+    <input id="message" placeholder="Enter message">
+    <button onclick="sendMessage()">Send</button>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
