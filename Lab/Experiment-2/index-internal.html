@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal CSS</title>
+
+    <style>
+        /* Universal Selector */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Element Selector */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #eef2f7;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            border-radius: 8px;
+        }
+
+        /* Class Selector */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 25px;
+            border-radius: 10px;
+        }
+
+        .box {
+            background-color: #3498db;
+            color: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* ID Selector */
+        #special {
+            background-color: #27ae60;
+        }
+
+        /* Pseudo-class */
+        .box:hover {
+            background-color: #e67e22;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Internal CSS Demonstration</h1>
+
+    <div class="container">
+        <h2>What is Internal CSS?</h2>
+
+        <p>
+            Internal CSS is written inside the style tag
+            in the head section of an HTML document.
+        </p>
+
+        <div class="box">Normal CSS Class</div>
+
+        <div class="box" id="special">
+            CSS using ID Selector
+        </div>
+
+        <div class="box">
+            Hover over this box
+        </div>
+    </div>
+
+</body>
+</html>
