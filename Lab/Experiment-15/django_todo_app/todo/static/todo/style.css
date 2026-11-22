@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f6fa;
+    color: #202a35;
+}
+
+.navbar {
+    background: #0c4b33;
+    padding: 12px 24px;
+}
+
+.navbar .brand {
+    color: white;
+    font-weight: bold;
+    margin-right: 24px;
+}
+
+.navbar a {
+    color: #d7f0e3;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 24px;
+    background: white;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 14px;
+    background: #0c4b33;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e6ed;
+}
+
+.actions {
+    float: right;
+}
+
+.actions a {
+    margin-left: 12px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 60%;
+}

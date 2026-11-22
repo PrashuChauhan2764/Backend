@@ -1,0 +1,11 @@
+<li>
+    {% if task.completed %}
+        <s>{{ task.title }}</s>
+    {% else %}
+        {{ task.title }}
+    {% endif %}
+    <span class="actions">
+        <a href="{% url 'toggle_task' task.id %}">Toggle</a>
+        <a href="{% url 'delete_task' task.id %}">Delete</a>
+    </span>
+</li>
