@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 04 - Bootstrap and Tailwind CSS</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Disable Tailwind's reset so it does not interfere with Bootstrap styles -->
+    <script>
+        tailwind = {
+            config: {
+                corePlugins: {
+                    preflight: false
+                }
+            }
+        };
+    </script>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+
+    <!-- Main heading and links to each part -->
+    <header class="bg-dark text-white text-center p-4">
+        <h1>Experiment 04</h1>
+        <p class="mb-3">Responsive Web Pages using Bootstrap and Tailwind CSS</p>
+        <a href="#bootstrap" class="btn btn-light btn-sm me-2">Bootstrap Tasks</a>
+        <a href="#tailwind" class="btn btn-outline-light btn-sm">Tailwind Tasks</a>
+    </header>
+
+    <!-- ==================== PART A: BOOTSTRAP ==================== -->
+    <section id="bootstrap">
+        <div class="container py-4">
+            <h2 class="mb-3">Part A - Bootstrap</h2>
+            <p>This section demonstrates Tasks 1 to 4 using Bootstrap classes.</p>
+
+            <!-- Task 1: Bootstrap setup is demonstrated by the Bootstrap CDN in the head -->
+
+            <!-- Task 2: Responsive Navbar -->
+            <h3 class="mt-4">Task 1 and 2 - Bootstrap Setup and Responsive Navbar</h3>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark rounded">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#bootstrap">MySite</a>
+                    <button class="navbar-toggler" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#bootstrapMenu"
+                            aria-controls="bootstrapMenu" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="bootstrapMenu">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link active" href="#bootstrap">Home</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#bootstrap-hero">About</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#bootstrap-cards">Services</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#page-footer">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Task 3: Hero Section with Grid Columns -->
+            <h3 id="bootstrap-hero" class="mt-5">Task 3 - Bootstrap Hero Section</h3>
+            <div class="row align-items-center mt-3">
+                <div class="col-lg-6 mb-4">
+                    <h1 class="fw-bold">Welcome to MySite</h1>
+                    <p class="text-muted">
+                        Bootstrap makes responsive web design easier.
+                        This section has two columns on large screens and stacks on small screens.
+                    </p>
+                    <a href="#bootstrap-cards" class="btn btn-primary">Get Started</a>
+                    <a href="#tailwind" class="btn btn-outline-secondary">Learn More</a>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <img src="https://placehold.co/500x300" class="img-fluid rounded"
+                         alt="Placeholder hero image">
+                </div>
+            </div>
+
+            <!-- Task 4: Card Grid Section -->
+            <h3 id="bootstrap-cards" class="mt-5">Task 4 - Bootstrap Card Grid</h3>
+            <div class="row g-3 mt-2">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary">Web Design</h5>
+                            <p class="card-text">Creating simple and responsive web pages.</p>
+                            <a href="#tailwind" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">Development</h5>
+                            <p class="card-text">Building websites using HTML, CSS and JavaScript.</p>
+                            <a href="#tailwind" class="btn btn-outline-success">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-danger">SEO</h5>
+                            <p class="card-text">Improving the visibility of websites in search engines.</p>
+                            <a href="#tailwind" class="btn btn-outline-danger">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- ==================== PART B: TAILWIND CSS ==================== -->
+    <section id="tailwind" class="py-4">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-3">Part B - Tailwind CSS</h2>
+            <p class="mb-4">This section demonstrates Tasks 5 to 8 using Tailwind utility classes.</p>
+
+            <!-- Task 5: Tailwind setup is demonstrated by the Tailwind CDN in the head -->
+
+            <!-- Task 6: Tailwind Navbar -->
+            <h3 class="text-xl font-semibold mb-3">Task 5 and 6 - Tailwind Setup and Navbar</h3>
+            <nav class="bg-gray-900 text-white rounded">
+                <div class="px-4 py-3 flex flex-col sm:flex-row items-center justify-between">
+                    <span class="text-xl font-bold">MySite</span>
+                    <ul class="flex flex-wrap justify-center gap-4 mt-2 sm:mt-0">
+                        <li><a href="#tailwind" class="hover:text-gray-300">Home</a></li>
+                        <li><a href="#tailwind-hero" class="hover:text-gray-300">About</a></li>
+                        <li><a href="#tailwind-cards" class="hover:text-gray-300">Services</a></li>
+                        <li><a href="#page-footer" class="hover:text-gray-300">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Task 7: Tailwind Hero Section -->
+            <h3 id="tailwind-hero" class="text-xl font-semibold mt-8 mb-3">Task 7 - Tailwind Hero Section</h3>
+            <section class="py-8 flex flex-col lg:flex-row items-center gap-8">
+                <div class="w-full lg:w-1/2">
+                    <h1 class="text-3xl font-bold text-gray-900 mb-4">Welcome to MySite</h1>
+                    <p class="text-gray-600 mb-5">
+                        Tailwind uses utility classes to style HTML elements.
+                        The content is stacked on mobile and displayed in two columns on larger screens.
+                    </p>
+                    <a href="#tailwind-cards"
+                       class="inline-block bg-blue-600 text-white px-5 py-2 rounded">Get Started</a>
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <img src="https://placehold.co/500x300" class="w-full rounded"
+                         alt="Placeholder hero image">
+                </div>
+            </section>
+
+            <!-- Task 8: Tailwind Card Grid and Footer -->
+            <h3 id="tailwind-cards" class="text-xl font-semibold mt-6 mb-3">Task 8 - Tailwind Card Grid</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div class="bg-white border border-gray-300 rounded-lg p-5">
+                    <h4 class="text-lg font-semibold text-blue-600 mb-2">Web Design</h4>
+                    <p class="text-gray-600 mb-3">Creating simple and responsive web pages.</p>
+                    <a href="#page-footer" class="text-blue-600 underline">Learn More</a>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-lg p-5">
+                    <h4 class="text-lg font-semibold text-green-600 mb-2">Development</h4>
+                    <p class="text-gray-600 mb-3">Building websites using HTML, CSS and JavaScript.</p>
+                    <a href="#page-footer" class="text-green-600 underline">Learn More</a>
+                </div>
+                <div class="bg-white border border-gray-300 rounded-lg p-5">
+                    <h4 class="text-lg font-semibold text-red-600 mb-2">SEO</h4>
+                    <p class="text-gray-600 mb-3">Improving the visibility of websites in search engines.</p>
+                    <a href="#page-footer" class="text-red-600 underline">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="page-footer" class="bg-dark text-white text-center p-3 mt-4">
+        <p class="mb-0">© 2026 MySite - Experiment 04</p>
+    </footer>
+
+    <!-- Bootstrap JavaScript is required for the responsive navbar toggle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
