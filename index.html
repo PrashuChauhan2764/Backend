@@ -17,6 +17,7 @@
       --border: #2b3a56;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -35,16 +36,19 @@
     .pill { border: 1px solid var(--border); background: #111a2b; padding: 7px 12px; border-radius: 999px; color: #dce6fa; font-size: .88rem; }
     section { margin: 28px 0 42px; }
     h2 { font-size: 1.55rem; margin: 0 0 16px; }
+    .section-intro { color: var(--muted); margin: -8px 0 18px; font-size: .94rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(245px, 1fr)); gap: 14px; }
     .card { background: linear-gradient(145deg, var(--surface), #101827); border: 1px solid var(--border); border-radius: 16px; padding: 19px; }
     .card h3 { margin: 0 0 7px; font-size: 1.05rem; }
     .card p { color: var(--muted); margin: 0 0 13px; font-size: .94rem; }
-    .links { display: flex; flex-wrap: wrap; gap: 12px; font-size: .92rem; }
+    .links { display: flex; flex-wrap: wrap; gap: 9px 13px; font-size: .92rem; }
     .details { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 10px; }
     .detail { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 13px 15px; }
     .detail strong { display: block; font-size: .78rem; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
     footer { border-top: 1px solid var(--border); color: var(--muted); padding: 24px 0 38px; margin-top: 50px; font-size: .9rem; }
     .note { color: var(--muted); font-size: .9rem; }
+    .top-link { display: inline-block; margin-top: 10px; }
+    @media (max-width: 600px) { header { padding-top: 42px; } .wrap { width: min(100% - 26px, 1080px); } }
   </style>
 </head>
 <body>
@@ -68,30 +72,47 @@
         <div class="detail"><strong>SAP ID</strong>590016978</div>
         <div class="detail"><strong>Faculty</strong>Prateek Raj</div>
         <div class="detail"><strong>Subject</strong>Backend Development</div>
+        <div class="detail"><strong>Course Code</strong>CSFS3008P</div>
+        <div class="detail"><strong>Semester / Batch</strong>5th · 05 (Core)</div>
       </div>
     </section>
 
-    <section>
+    <section id="lab">
       <h2>Lab Experiments</h2>
+      <p class="section-intro">Select an HTML page to open its live browser view, or open the experiment folder to inspect the source files.</p>
       <div class="grid">
         <article class="card">
           <h3>Experiment 1 · HTML Basics</h3>
           <p>Basic HTML page and repository setup.</p>
-          <div class="links"><a href="./Lab/Experiment1/index.html">Open HTML page ↗</a><a href="./Lab/Experiment1/">Source folder ↗</a></div>
+          <div class="links"><a href="./Lab/Experiment1/index.html">Open HTML page ↗</a><a href="./Lab/Experiment1/">Source folder</a><a href="https://github.com/PrashuChauhan2764/Backend/blob/main/Lab/Experiment1/report.md">Report</a></div>
         </article>
         <article class="card">
           <h3>Experiment 2 · CSS Fundamentals</h3>
-          <p>Selectors, inline/internal/external CSS, layout and animations.</p>
-          <div class="links"><a href="./Lab/Experiment-2/index-selectors.html">Selectors</a><a href="./Lab/Experiment-2/index-layout.html">Layout</a><a href="./Lab/Experiment-2/index-animations.html">Animations</a><a href="./Lab/Experiment-2/">All files</a></div>
+          <p>Selectors, inline, internal and external CSS, layout and animations.</p>
+          <div class="links">
+            <a href="./Lab/Experiment-2/index-selectors.html">Selectors</a>
+            <a href="./Lab/Experiment-2/index-inline.html">Inline CSS</a>
+            <a href="./Lab/Experiment-2/index-internal.html">Internal CSS</a>
+            <a href="./Lab/Experiment-2/index-external.html">External CSS</a>
+            <a href="./Lab/Experiment-2/index-layout.html">Layout</a>
+            <a href="./Lab/Experiment-2/index-animations.html">Animations</a>
+          </div>
         </article>
         <article class="card">
           <h3>Experiment 3 · Responsive Design</h3>
           <p>Responsive pages, Flexbox, mobile cards, navigation and Grid.</p>
-          <div class="links"><a href="./Lab/Experiment-3/experiment03-responsive.html">Main page</a><a href="./Lab/Experiment-3/task2-flexbox.html">Flexbox</a><a href="./Lab/Experiment-3/task4-responsive-navbar.html">Navbar</a><a href="./Lab/Experiment-3/">All files</a></div>
+          <div class="links">
+            <a href="./Lab/Experiment-3/experiment03-responsive.html">Main page</a>
+            <a href="./Lab/Experiment-3/task1-basic.html">Basic layout</a>
+            <a href="./Lab/Experiment-3/task2-flexbox.html">Flexbox</a>
+            <a href="./Lab/Experiment-3/task3-mobile-cards.html">Mobile cards</a>
+            <a href="./Lab/Experiment-3/task4-responsive-navbar.html">Responsive navbar</a>
+            <a href="./Lab/Experiment-3/task5-grid-footer.html">Grid footer</a>
+          </div>
         </article>
         <article class="card">
           <h3>Experiment 4 · Bootstrap & Tailwind</h3>
-          <p>Practical work using CSS utility and component frameworks.</p>
+          <p>Practical work using CSS frameworks.</p>
           <div class="links"><a href="./Lab/Experiment-4/experiment04-bootstrap-tailwind.html">Open HTML page ↗</a><a href="./Lab/Experiment-4/">Source folder</a></div>
         </article>
         <article class="card">
@@ -106,53 +127,53 @@
         </article>
         <article class="card">
           <h3>Experiments 9–11 · Web Practical</h3>
-          <p>Web practical files and data examples.</p>
+          <p>Web practical files with JavaScript and structured data examples.</p>
           <div class="links"><a href="./Lab/Experiment-9_10_11/index%20(1).html">Open HTML page ↗</a><a href="./Lab/Experiment-9_10_11/">Source folder</a></div>
         </article>
         <article class="card">
           <h3>Experiment 12 · Node.js & Express</h3>
-          <p>Node.js and Express practical project files.</p>
-          <div class="links"><a href="./Lab/Experiment12/">Source folder ↗</a></div>
+          <p>Node.js and Express practical project.</p>
+          <div class="links"><a href="./Lab/Experiment12/nodejs-express-lab/">Project folder ↗</a></div>
         </article>
         <article class="card">
-          <h3>Experiment 13 · Mongoose</h3>
-          <p>MongoDB and Mongoose demonstration/setup.</p>
-          <div class="links"><a href="./Lab/Experiment13/">Source folder ↗</a></div>
+          <h3>Experiment 13 · MongoDB & Mongoose</h3>
+          <p>Mongoose project setup and database connectivity work.</p>
+          <div class="links"><a href="./Lab/Experiment13/mongoose-demo/">Project folder ↗</a></div>
         </article>
         <article class="card">
           <h3>Experiment 15 · Django To-Do</h3>
           <p>Django application with task-related templates and static assets.</p>
-          <div class="links"><a href="./Lab/Experiment-15/">Source folder ↗</a></div>
+          <div class="links"><a href="./Lab/Experiment-15/django_todo_app/">Django project folder ↗</a></div>
         </article>
         <article class="card">
           <h3>Mini Project · Blog CMS</h3>
-          <p>Blog content management system project.</p>
+          <p>Blog content management system built with Node.js, Express and EJS.</p>
           <div class="links"><a href="./Lab/cms-lab/">Project folder ↗</a><a href="./Lab/cms-lab/README.md">Project README ↗</a></div>
         </article>
       </div>
     </section>
 
-    <section>
+    <section id="theory">
       <h2>Theory & Assignments</h2>
       <div class="grid">
         <article class="card">
           <h3>Assignment 01 · To-Do App</h3>
-          <p>Browser-based app using HTML, CSS, JavaScript and browser storage.</p>
+          <p>Browser-based application using HTML, CSS, JavaScript and browser storage.</p>
           <div class="links"><a href="./Theory/Assignment01_ToDoApp/index.html">Open page ↗</a><a href="./Theory/Assignment01_ToDoApp/">Source folder</a></div>
         </article>
         <article class="card">
           <h3>Socket.IO Chat</h3>
           <p>Client-server chat application files.</p>
-          <div class="links"><a href="./Theory/SocketIO-Chat/client/index.html">Client page ↗</a><a href="./Theory/SocketIO-Chat/">Project folder</a></div>
+          <div class="links"><a href="./Theory/SocketIO-Chat/client/index.html">Open client page ↗</a><a href="./Theory/SocketIO-Chat/">Project folder</a></div>
         </article>
         <article class="card">
           <h3>Unit 1 · FastAPI</h3>
-          <p>FastAPI backend demonstration and HTML template.</p>
-          <div class="links"><a href="./Theory/Unit1/FASTAPI/">Project folder ↗</a><a href="./Theory/Unit1/FASTAPI/templates/index.html">Template source</a></div>
+          <p>FastAPI backend demonstration and templates.</p>
+          <div class="links"><a href="./Theory/Unit1/FASTAPI/">Project folder ↗</a></div>
         </article>
         <article class="card">
           <h3>Unit 1 · Flask</h3>
-          <p>Flask backend project environment and related work.</p>
+          <p>Flask backend environment and related work.</p>
           <div class="links"><a href="./Theory/Unit1/flask_server/">Project folder ↗</a></div>
         </article>
         <article class="card">
@@ -167,7 +188,7 @@
         </article>
         <article class="card">
           <h3>Unit 2 · JWT Authentication</h3>
-          <p>JWT authentication-related implementation files.</p>
+          <p>JWT authentication implementation files.</p>
           <div class="links"><a href="./Theory/Unit2/JWT_Authentication/">Project folder ↗</a></div>
         </article>
         <article class="card">
@@ -178,7 +199,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="tools">
       <h2>Technologies & Tools</h2>
       <div class="pills">
         <span class="pill">HTML</span><span class="pill">CSS</span><span class="pill">JavaScript</span>
@@ -187,7 +208,8 @@
         <span class="pill">Flask</span><span class="pill">FastAPI</span><span class="pill">Django</span>
         <span class="pill">Socket.IO</span><span class="pill">SQLite</span><span class="pill">Git & GitHub</span><span class="pill">Docker</span>
       </div>
-      <p class="note">Static HTML pages can be viewed directly here. Backend projects that require Node.js, Python servers, databases or other services must be run in their respective environments; GitHub Pages does not run backend servers.</p>
+      <p class="note">HTML links open the static pages hosted on GitHub Pages. Backend projects that require Node.js, Python servers, databases or other services must be run in their respective environments; GitHub Pages does not run backend servers.</p>
+      <a class="top-link" href="https://github.com/PrashuChauhan2764/Backend">View source repository on GitHub ↗</a>
     </section>
   </main>
 
