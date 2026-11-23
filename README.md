@@ -1,10 +1,8 @@
-# Backend
-This repo  contains the backend works.
+# Backend Development
+
+A collection of coursework, practical experiments, assignments, and learning projects completed for the **Backend Development** course.
+
 <div align="center">
-
-# 🖥️ Backend Development
-
-### Lab Experiments · Theory Units · Assignments
 
 ![Course](https://img.shields.io/badge/Course-CSFS3008P-blue?style=for-the-badge)
 ![Semester](https://img.shields.io/badge/Semester-5th-green?style=for-the-badge)
@@ -12,11 +10,9 @@ This repo  contains the backend works.
 
 </div>
 
----
+## Student Details
 
-## 👤 Student Details
-
-| | |
+| Detail | Information |
 |---|---|
 | **Name** | Prashu Chauhan |
 | **SAP ID** | 590016978 |
@@ -26,202 +22,121 @@ This repo  contains the backend works.
 | **Course Code** | CSFS3008P |
 | **Faculty** | Prateek Raj |
 
----
+## About This Repository
 
-## 📖 About This Repository
+This repository is organised into two main sections:
 
-This repository contains all my work for the **Backend Development** course. It is organised into two parts:
+- **Lab** — practical experiments covering web fundamentals, frontend technologies, JavaScript, Node.js, Express, MongoDB/Mongoose, and Django.
+- **Theory** — unit-wise backend demonstrations, assignments, API and database concepts, authentication, and related work.
 
-- **Theory**: unit-wise learning material, code demos and assignments
-- **Lab**: hands-on experiments and a mini project (Blog CMS)
-
----
-
-## 📑 Table of Contents
-
-1. [Repository Structure](#️-repository-structure)
-2. [Theory](#-theory)
-3. [Lab](#-lab)
-4. [Technologies Used](#️-technologies-used)
-5. [How to Run](#️-how-to-run)
-
----
-
-## 🗂️ Repository Structure
+## Repository Structure
 
 ```text
 Backend/
+├── Lab/
+│   ├── cms-lab/
+│   ├── Experiment1/
+│   ├── Experiment-2/
+│   ├── Experiment-3/
+│   ├── Experiment-4/
+│   ├── Experiment-5/
+│   ├── Experiment07_08/
+│   ├── Experiment-9_10_11/
+│   ├── Experiment12/
+│   ├── Experiment13/
+│   └── Experiment-15/
 │
 ├── Theory/
-│   ├── report.md
-│   ├── Assignment01_ToDoApp/     → Notes App (LocalStorage)
-│   ├── Unit1/                    → Introduction to Backend Development
+│   ├── Assignment01_ToDoApp/
+│   ├── SocketIO-Chat/
+│   ├── Unit1/
 │   │   ├── FASTAPI/
 │   │   └── flask_server/
-│   └── Unit2/                    → Data Management, API Development
-│       └── DataModel/
-│
-├── Lab/
-│   ├── Experiment1/              → Basic HTML page
-│   ├── Experiment13/
-│   │   └── mongoose-demo/        → Mongoose environment setup
-│   └── cms-lab/                  → Blog CMS mini project
+│   ├── Unit2/
+│   │   ├── Authentication/
+│   │   ├── DataModel/
+│   │   └── JWT_Authentication/
+│   └── Unit3/
+│       └── docker-demo/
 │
 └── README.md
 ```
 
----
+## Lab Experiments
 
-## 📚 Theory
+The links below take you to the corresponding experiment folders. Where an HTML page is present, a direct link to that file is also provided.
 
-### Unit I: Introduction to Backend Development
+| Experiment | Work / Focus | Folder | HTML file |
+|---|---|---|---|
+| **Experiment 1** | Basic HTML page and repository setup | [Open folder](./Lab/Experiment1/) | [index.html](./Lab/Experiment1/index.html) |
+| **Experiment 2** | CSS fundamentals: selectors, styling, layout and animations | [Open folder](./Lab/Experiment-2/) | [HTML examples](./Lab/Experiment-2/) |
+| **Experiment 3** | Responsive design, Flexbox, Grid and navigation layouts | [Open folder](./Lab/Experiment-3/) | [HTML examples](./Lab/Experiment-3/) |
+| **Experiment 4** | Bootstrap and Tailwind CSS practical work | [Open folder](./Lab/Experiment-4/) | [Open folder](./Lab/Experiment-4/) |
+| **Experiment 5** | HTML practical | [Open folder](./Lab/Experiment-5/) | [index.html](./Lab/Experiment-5/index.html) |
+| **Experiments 7–8** | JavaScript practical work | [Open folder](./Lab/Experiment07_08/) | [index.html](./Lab/Experiment07_08/index.html) |
+| **Experiments 9–11** | JavaScript / web practical work with data files | [Open folder](./Lab/Experiment-9_10_11/) | [index.html](./Lab/Experiment-9_10_11/index%20%281%29.html) |
+| **Experiment 12** | Node.js and Express practical | [Open folder](./Lab/Experiment12/) | — |
+| **Experiment 13** | MongoDB and Mongoose setup | [Open folder](./Lab/Experiment13/) | — |
+| **Experiment 15** | Django To-Do application | [Open folder](./Lab/Experiment-15/) | [Templates folder](./Lab/Experiment-15/django_todo_app/templates/) |
 
-| Folder | Purpose |
-|---|---|
-| [`FASTAPI`](./Theory/Unit1/FASTAPI/README.md) | Introduction to building backend APIs with FastAPI |
-| `flask_server` | Flask server environment set up with Pipenv (`Pipfile`) |
-| [`Assignment01_ToDoApp`](./Theory/Assignment01_ToDoApp/) | Notes App built from the Web Storage API lecture (details below) |
+### Mini Project: Blog CMS
 
-### Unit II: Data Management, API Development
+**Folder:** [Lab/cms-lab](./Lab/cms-lab/) · [Project README](./Lab/cms-lab/README.md)
 
-| Folder | Purpose |
-|---|---|
-| `DataModel` | Python (`main.py`) demo that defines a student data model and stores records in a SQLite database (`students.db`) |
+A Node.js and Express-based Blog CMS project using EJS templates and MongoDB.
 
-📝 Theory report: [`Theory/report.md`](./Theory/report.md)
+Refer to the project README for its implementation details and instructions.
 
----
+## Theory and Assignments
 
-### 📌 Assignment 01: Notes App (LocalStorage, SessionStorage & JSON)
-
-📁 Folder: [`Theory/Assignment01_ToDoApp`](./Theory/Assignment01_ToDoApp/) · 📄 [Assignment README](./Theory/Assignment01_ToDoApp/README.md) · 🌐 [Working page](./Theory/Assignment01_ToDoApp/index.html)
-
-**Purpose:** A browser-based notes app built from the Unit 1 lecture on the *Web Storage API*. It shows how data can persist in the browser without a server.
-
-**Required features**
-- Add, edit and delete notes
-- Notes persist after page refresh using `localStorage`
-- Each note stores `id`, `text`, `createdAt` and `updatedAt`
-
-**Extra features:** search/filter, character count (0/500), clear all notes, empty-input validation, responsive layout
-
-**Concepts demonstrated:** `localStorage.setItem()` / `getItem()` / `removeItem()`, `JSON.stringify()` / `JSON.parse()`, CRUD operations, DOM rendering
-
-**Tech:** HTML · CSS · JavaScript
-
-**Screenshot**
-
-![Notes App](./Theory/Assignment01_ToDoApp/screenshots/notes-app.png)
-
----
-
-## 🧪 Lab
-
-### Experiment 1: Creating an HTML Page with Basic Tags
-
-| | |
-|---|---|
-| **Aim** | Create an HTML page using all the basic tags and set up the repository |
-| **What I did** | Cloned the `Backend` repo, created the `Lab` and `Theory` folders, and added `index.html` and `report.md` |
-| **Challenges** | Cloning the repo to local storage; adding the Lab and Theory folders |
-| **Outcome** | Both files created successfully and the basic HTML page runs in the browser |
-| **Tech** | HTML, Git, GitHub |
-| **Links** | 📄 [Report](./Lab/Experiment1/report.md) · 🌐 [Working page](./Lab/Experiment1/index.html) |
-
-<!-- 🖼️ Add Experiment 1 screenshots here -->
-
----
-
-### Experiment 13: Mongoose Demo (MongoDB with Node.js)
-
-| | |
-|---|---|
-| **Aim** | Connect Node.js to MongoDB using Mongoose |
-| **Status** | 🔧 Environment setup completed (`package.json`, dependencies installed); implementation in progress |
-| **Tech** | Node.js, MongoDB, Mongoose |
-| **Folder** | [`Lab/Experiment13/mongoose-demo`](./Lab/Experiment13/mongoose-demo) |
-
----
-
-### 🚀 Mini Project: Simple Blog CMS (`cms-lab`)
-
-📁 Folder: [`Lab/cms-lab`](./Lab/cms-lab) · 📄 [Detailed project README](./Lab/cms-lab/README.md)
-
-A **Blog Content Management System** where users can create posts and read them, with all data stored permanently in MongoDB.
-
-**Features**
-- Create a post with title, content and author (with validation)
-- `createdAt` is generated automatically by the backend
-- Home page lists all posts, newest first
-- Clicking a title opens the full post, retrieved by MongoDB `_id`
-
-**Tech:** Node.js · Express.js · EJS · MongoDB (native driver) · HTML/CSS
-
-**Routes**
-
-| Method | Route | Purpose |
+| Unit / Work | Contents | Open |
 |---|---|---|
-| GET | `/` | Display all posts |
-| GET | `/posts/new` | Show the create-post form |
-| POST | `/posts` | Validate and create a post |
-| GET | `/posts/:id` | Display one complete post |
+| **Assignment 01 – To-Do App** | Browser-based app demonstrating HTML, CSS, JavaScript and browser storage | [Open project](./Theory/Assignment01_ToDoApp/) · [index.html](./Theory/Assignment01_ToDoApp/index.html) |
+| **Socket.IO Chat** | Client-server chat application | [Open project](./Theory/SocketIO-Chat/) · [Client page](./Theory/SocketIO-Chat/client/index.html) |
+| **Unit 1 – FastAPI** | FastAPI backend demonstration and templates | [Open project](./Theory/Unit1/FASTAPI/) · [Template](./Theory/Unit1/FASTAPI/templates/index.html) |
+| **Unit 1 – Flask** | Flask environment / backend work | [Open project](./Theory/Unit1/flask_server/) |
+| **Unit 2 – Authentication** | Authentication demonstration | [Open project](./Theory/Unit2/Authentication/) |
+| **Unit 2 – Data Model** | Python data model and SQLite database demonstration | [Open project](./Theory/Unit2/DataModel/) |
+| **Unit 2 – JWT Authentication** | JWT-based authentication implementation | [Open project](./Theory/Unit2/JWT_Authentication/) |
+| **Unit 3 – Docker Demo** | Docker practical work | [Open project](./Theory/Unit3/docker-demo/) |
 
-**Flow:** `Browser → Express Route → Backend Logic → MongoDB → EJS Template → HTML Response`
+## Technologies Used
 
-**Screenshots**
+- **Frontend:** HTML, CSS, JavaScript, Bootstrap, Tailwind CSS
+- **Backend:** Node.js, Express.js, Python, Flask, FastAPI, Django
+- **Templating / Real-time:** EJS, Socket.IO
+- **Databases:** MongoDB, SQLite
+- **Tools:** Git, GitHub, Pipenv, Docker
 
-| Home Page | Create Post | Individual Post |
-|---|---|---|
-| ![Home](./Lab/cms-lab/screenshots/home.png) | ![Create](./Lab/cms-lab/screenshots/create-post.png) | ![Post](./Lab/cms-lab/screenshots/individual-post.png) |
+## Running the Work
 
----
+### Static HTML pages
 
-## 🛠️ Technologies Used
+1. Open the relevant experiment folder.
+2. Open its HTML file (for example, `index.html`) in a browser.
 
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat&logo=nodedotjs&logoColor=white)
-![Express](https://img.shields.io/badge/Express-000000?style=flat&logo=express&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
-![Flask](https://img.shields.io/badge/Flask-000000?style=flat&logo=flask&logoColor=white)
-![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat&logo=sqlite&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+### Node.js / Express projects
 
----
+Open a terminal in the relevant project folder, install its dependencies, and run its entry-point file. For example:
 
-## ▶️ How to Run
-
-**Clone the repository**
-```bash
-git clone https://github.com/PrashuChauhan2764/Backend.git
-cd Backend
-```
-
-**Static pages (Experiment 1, Assignment 01):** open `index.html` in Chrome or Edge.
-
-**Blog CMS (Node.js + MongoDB):**
 ```bash
 cd Lab/cms-lab
 npm install
 node app.js
 ```
-Make sure MongoDB is running locally, then open `http://localhost:3000`.
 
-**Python demos (Theory):**
-```bash
-cd Theory/Unit2/DataModel
-pipenv install
-pipenv run python main.py
-```
+### Python projects
+
+Use the `Pipfile` in the relevant project folder to install its dependencies with Pipenv, then run that project's Python entry point.
+
+> **Note:** Links to HTML files in this README open the files on GitHub. GitHub's file view displays the source; to open a page as a hosted, interactive website, the project must be published using a static hosting service such as GitHub Pages. Backend applications also need their server and required database/services running.
 
 ---
 
 <div align="center">
 
-**Prashu Chauhan** · SAP ID 590016978 · Batch 05 (Core)
-Submitted to **Prateek Raj** · Backend Development (CSFS3008P)
+**Prashu Chauhan** · Backend Development · CSFS3008P
+
+Submitted to **Prateek Raj**
 
 </div>
