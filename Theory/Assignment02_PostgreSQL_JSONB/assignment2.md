@@ -3,7 +3,7 @@
 **Student:** Prashu Chauhan  
 **Course:** Backend Development
 
-> Coursework copy adapted from the reference assignment by Raj Tanay Singh. Review and run the SQL queries before submission.
+> Review and run the SQL queries to understand the practical implementation before submission.
 
 ## Learning Objective
 
