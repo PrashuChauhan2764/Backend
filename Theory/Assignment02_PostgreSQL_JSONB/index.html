@@ -1,193 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>PostgreSQL JSONB - Assignment 2</title>
-
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f6f8fa;
-            color: #1f2328;
-            line-height: 1.7;
-        }
-
-        header {
-            background: #24292f;
-            color: white;
-            padding: 35px 20px;
-        }
-
-        header div {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        header h1 {
-            margin: 0 0 8px;
-        }
-
-        header p {
-            margin: 0;
-            color: #d0d7de;
-        }
-
-        nav {
-            background: white;
-            border-bottom: 1px solid #d0d7de;
-            padding: 15px 20px;
-        }
-
-        nav div {
-            max-width: 1000px;
-            margin: auto;
-        }
-
-        nav a {
-            color: #0969da;
-            text-decoration: none;
-            font-weight: bold;
-            margin-right: 25px;
-        }
-
-        main {
-            max-width: 1000px;
-            margin: 35px auto;
-            padding: 0 20px;
-        }
-
-        #assignment {
-            background: white;
-            border: 1px solid #d0d7de;
-            border-radius: 10px;
-            padding: 35px;
-        }
-
-        #assignment h1,
-        #assignment h2,
-        #assignment h3 {
-            border-bottom: 1px solid #d8dee4;
-            padding-bottom: 8px;
-            margin-top: 30px;
-        }
-
-        pre {
-            background: #0d1117;
-            color: #e6edf3;
-            padding: 18px;
-            border-radius: 7px;
-            overflow-x: auto;
-        }
-
-        code {
-            font-family: Consolas, Monaco, monospace;
-        }
-
-        p code {
-            background: #eff1f3;
-            padding: 2px 6px;
-            border-radius: 4px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }
-
-        th, td {
-            border: 1px solid #d0d7de;
-            padding: 10px;
-            text-align: left;
-        }
-
-        th {
-            background: #f6f8fa;
-        }
-
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: #57606a;
-        }
-
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #57606a;
-        }
-    </style>
-</head>
-
-<body>
-
-<header>
-    <div>
-        <h1>PostgreSQL JSONB — Assignment 2</h1>
-        <p>Backend Development Theory · Prashu Chauhan</p>
-    </div>
-</header>
-
-<nav>
-    <div>
-        <a href="../../index.html#theory">← Theory & Assignments</a>
-        <a href="../../index.html">Home</a>
-    </div>
-</nav>
-
-<main>
-
-    <div id="assignment">
-        <div class="loading">Loading assignment...</div>
-    </div>
-
-</main>
-
-<footer>
-    PostgreSQL JSONB Assignment 2 | Prashu Chauhan
-</footer>
-
-<script>
-async function loadAssignment() {
-
-    const container =
-        document.getElementById("assignment");
-
-    try {
-
-        const response =
-            await fetch("590014851_assignment2.md");
-
-        if (!response.ok) {
-            throw new Error("Assignment file could not be loaded.");
-        }
-
-        const markdown =
-            await response.text();
-
-        container.innerHTML =
-            marked.parse(markdown);
-
-    } catch (error) {
-
-        container.innerHTML =
-            "<h2>Unable to load assignment</h2>" +
-            "<p>" + error.message + "</p>";
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Assignment 2: PostgreSQL JSONB conceptual questions and hands-on product catalog exercise.">
+  <title>Assignment 02 | PostgreSQL JSONB</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+  <style>
+    :root {
+      --bg: #f5f7fb; --surface: #fff; --ink: #202633; --muted: #667085;
+      --line: #e3e8f0; --accent: #315efb; --accent-soft: #edf2ff;
+      --code: #10141d; --shadow: 0 8px 30px rgba(25, 42, 70, .06);
     }
-}
-
-loadAssignment();
-</script>
-
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 92px; }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: Inter, Arial, sans-serif; line-height: 1.75; }
+    .topbar { background: #111827; color: white; padding: 13px 22px; }
+    .topbar-inner { max-width: 1220px; margin: auto; display:flex; justify-content:space-between; align-items:center; gap:16px; }
+    .brand { font-weight:700; letter-spacing:.2px; }
+    .topbar a { color:#dbe5ff; text-decoration:none; font-size:14px; }
+    .hero { background:linear-gradient(125deg,#101827,#1c2d55); color:white; padding:48px 22px 42px; }
+    .hero-inner { max-width:1220px; margin:auto; }
+    .eyebrow { color:#a9bfff; text-transform:uppercase; letter-spacing:1.5px; font-size:12px; font-weight:700; }
+    .hero h1 { margin:10px 0 8px; font-size:clamp(28px,4vw,42px); line-height:1.2; }
+    .hero p { margin:0; color:#d5def2; max-width:760px; }
+    .meta { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+    .pill { border:1px solid #52617e; color:#e5ebfa; padding:5px 11px; border-radius:30px; font-size:12px; }
+    .layout { max-width:1220px; margin:30px auto 70px; padding:0 22px; display:grid; grid-template-columns:250px minmax(0,1fr); gap:24px; align-items:start; }
+    aside { position:sticky; top:18px; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--shadow); max-height:calc(100vh - 36px); overflow:auto; }
+    aside h2 { font-size:13px; text-transform:uppercase; letter-spacing:1px; color:var(--muted); margin:0 0 12px; }
+    #toc { display:flex; flex-direction:column; gap:4px; }
+    #toc a { color:#475467; text-decoration:none; padding:7px 9px; border-radius:7px; font-size:13px; line-height:1.4; }
+    #toc a:hover { background:var(--accent-soft); color:var(--accent); }
+    article { min-width:0; background:var(--surface); border:1px solid var(--line); border-radius:16px; padding:clamp(22px,4vw,48px); box-shadow:var(--shadow); }
+    .intro { background:var(--accent-soft); border:1px solid #dce5ff; border-radius:12px; padding:16px 18px; margin-bottom:30px; }
+    .intro strong { color:#234bd2; }
+    #assignment h1 { font-size:30px; line-height:1.3; margin:12px 0 18px; }
+    #assignment h2 { font-size:25px; line-height:1.4; margin:48px 0 18px; padding-bottom:12px; border-bottom:1px solid var(--line); }
+    #assignment h3 { font-size:20px; line-height:1.5; margin:32px 0 12px; }
+    #assignment h4 { font-size:16px; margin:25px 0 8px; }
+    #assignment p { margin:12px 0 18px; }
+    #assignment ul, #assignment ol { padding-left:25px; }
+    #assignment li { margin:7px 0; }
+    #assignment hr { border:0; border-top:1px solid var(--line); margin:32px 0; }
+    #assignment p code, #assignment li code { font-family:"JetBrains Mono",monospace; font-size:.88em; color:#2447b8; background:#eef2ff; padding:2px 6px; border-radius:5px; }
+    #assignment pre { background:var(--code); color:#e6edf3; border-radius:11px; padding:20px; overflow-x:auto; margin:18px 0 24px; border:1px solid #252d3a; }
+    #assignment pre code { font-family:"JetBrains Mono",monospace; font-size:13px; line-height:1.7; }
+    #assignment blockquote { margin:18px 0; padding:12px 18px; border-left:4px solid var(--accent); background:#f7f9ff; color:#475467; }
+    #assignment table { width:100%; border-collapse:collapse; margin:20px 0; display:block; overflow-x:auto; }
+    #assignment th, #assignment td { border:1px solid var(--line); padding:10px 13px; text-align:left; }
+    #assignment th { background:#f7f9fc; }
+    .loading, .error { padding:35px; text-align:center; color:var(--muted); }
+    footer { text-align:center; color:var(--muted); font-size:13px; padding:25px; }
+    .backtop { display:inline-block; margin-top:25px; font-size:13px; color:var(--accent); text-decoration:none; }
+    @media(max-width:850px) { .layout { grid-template-columns:1fr; } aside { position:static; max-height:none; } #toc { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:520px) { .hero { padding:35px 18px; } .layout { padding:0 12px; margin-top:16px; } article { padding:20px 17px; } #toc { grid-template-columns:1fr; } #assignment h2 { font-size:22px; } }
+  </style>
+</head>
+<body id="top">
+  <div class="topbar"><div class="topbar-inner">
+    <span class="brand">Backend Development · Theory</span>
+    <a href="../../index.html#theory">← Back to Theory &amp; Assignments</a>
+  </div></div>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">Assignment 02</div>
+      <h1>PostgreSQL as SQL + NoSQL: Working with JSONB</h1>
+      <p>Conceptual questions and a practical product-catalog exercise using PostgreSQL JSONB, GIN indexing, and MongoDB comparison.</p>
+      <div class="meta">
+        <span class="pill">Student: Prashu Chauhan</span>
+        <span class="pill">Course: Backend Development</span>
+        <span class="pill">Part A · Part B</span>
+      </div>
+    </div>
+  </header>
+  <main class="layout">
+    <aside>
+      <h2>On this page</h2>
+      <nav id="toc"><span class="loading">Preparing contents…</span></nav>
+    </aside>
+    <article>
+      <div class="intro"><strong>Learning objective</strong><br>Understand how PostgreSQL JSONB combines relational SQL structure with flexible document-style data, then apply it through a product catalog.</div>
+      <div id="assignment"><div class="loading">Loading assignment content…</div></div>
+      <a class="backtop" href="#top">↑ Back to top</a>
+    </article>
+  </main>
+  <footer>Assignment 02 · PostgreSQL JSONB · Backend Development</footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>
+    function makeSlug(text) {
+      return text.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+    }
+    function buildContents() {
+      const headings = document.querySelectorAll("#assignment h1, #assignment h2, #assignment h3");
+      const toc = document.getElementById("toc");
+      toc.innerHTML = "";
+      headings.forEach((heading, index) => {
+        if (!heading.id) heading.id = makeSlug(heading.textContent) + "-" + index;
+        const link = document.createElement("a");
+        link.href = "#" + heading.id;
+        link.textContent = heading.textContent.replace(/^#+\s*/, "");
+        link.style.marginLeft = heading.tagName === "H3" ? "12px" : "0";
+        toc.appendChild(link);
+      });
+    }
+    async function loadAssignment() {
+      const container = document.getElementById("assignment");
+      try {
+        const response = await fetch("assignment2.md");
+        if (!response.ok) throw new Error("Could not load assignment2.md (HTTP " + response.status + ").");
+        const markdown = await response.text();
+        marked.setOptions({ gfm: true, breaks: false });
+        container.innerHTML = marked.parse(markdown);
+        buildContents();
+        document.querySelectorAll("#assignment pre code").forEach(block => {
+          if (window.hljs) hljs.highlightElement(block);
+        });
+      } catch (error) {
+        container.innerHTML = '<div class="error"><h2>Unable to load assignment</h2><p>' + error.message + '</p><p>Open the Markdown file from the assignment folder to view the source.</p></div>';
+      }
+    }
+    loadAssignment();
+  </script>
 </body>
 </html>
