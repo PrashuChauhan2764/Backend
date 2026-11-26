@@ -505,6 +505,3 @@ Indexing also differs. PostgreSQL can use a GIN index on an entire JSONB column 
 
 For this product catalog, both databases can represent the data effectively. PostgreSQL is particularly useful when the product catalog is part of a larger relational system, while MongoDB provides a natural document-oriented approach when flexible documents are the main data model.
 
----
-
-**Reference:** Adapted from the PostgreSQL JSONB assignment shared by Raj Tanay Singh: https://github.com/rajtanayjsr-debug/backend-development/tree/main/Theory/PostgreSQL-JSONB-Assignment_2
